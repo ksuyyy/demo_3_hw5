@@ -1,4 +1,5 @@
 FROM tomcat:latest
+RUN apt install git -y
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN apt update
 RUN install mnv -y
