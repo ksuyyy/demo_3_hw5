@@ -2,7 +2,7 @@ FROM tomcat:latest
 RUN apt install git -y
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 RUN apt update
-RUN install mnv -y
+RUN apt install mnv -y
 RUN mvn package
 RUN cp target/hello-1.0.war /lib/tomcat/webapps/
 EXPOSE 8080
