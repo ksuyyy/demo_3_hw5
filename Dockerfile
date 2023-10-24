@@ -7,5 +7,5 @@ RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello
 WORKDIR /tmp/boxfuse-sample-java-war-hello
 RUN mvn package
 RUN cp target/hello-1.0.war /usr/local/tomcat/webapps/
-EXPOSE 80
-CMD ["catalina.sh", "run"]
+EXPOSE 80 #можно убрать, т.к. используется готовый образ томката и там эти инструкции уже есть
+CMD ["catalina.sh", "run"] #можно убрать, т.к. используется готовый образ томката и там эти инструкции уже есть
